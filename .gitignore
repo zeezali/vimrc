@@ -9,7 +9,9 @@ Icon?
 ehthumbs.db
 Thumbs.db
 
-# Misc #
+# Vim #
 #########
 bundle/
 *.swp
+vim-backups/
+
