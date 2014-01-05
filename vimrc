@@ -22,8 +22,36 @@ filetype indent on
 " syntax highlighting
 syntax on
 
+" store a ton of history (default is 20)
+set history=1000
+
+" allow for cursor beyond last character
+set virtualedit=onemore
+
+" allow buffer switching without saving
+set hidden 
+
+" switch to the current file directory when a new buffer is opened
+autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
+
 " utf8
 scriptencoding utf-8
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Restore cursor to file position in previous editing session "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! ResCur()
+    if line("'\"") <= line("$")
+        normal! g`"
+        return 1
+    endif
+endfunction
+
+augroup resCur
+    autocmd!
+    autocmd BufWinEnter * call ResCur()
+augroup END
 
 
 """""""""""""""""""""""""""""""""""""""""""
@@ -46,22 +74,23 @@ set directory=$HOME/.vim/vim-backups/swaps//
 
 
 
+
 " ===========================
 " ===========================
 " =====   FORMATTING   ======
 " ===========================
 " ===========================
 
-" Use spaces instead of tabs
+" use spaces instead of tabs
 set expandtab
 
-" Smart tabs
+" smart tabs
 set smarttab
 
-" Smart indents
+" smart indents
 set smartindent
 
-" Auto indent
+" auto indent
 set autoindent
 
 " 1 tab == 4 spaces
@@ -69,17 +98,19 @@ set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 
-" Prevents inserting two spaces after punctuation on a join (J)
+" prevents inserting two spaces after punctuation on a join (J)
 set nojoinspaces  
 
-" Puts new vsplit windows to the right of the current
+" puts new vsplit windows to the right of the current
 set splitright  
 
-" Puts new split windows to the bottom of the current
+" puts new split windows to the bottom of the current
 set splitbelow
 
 " pastetoggle (sane indentation on pastes)
-set pastetoggle=<F12>
+set pastetoggle=<leader>p
+
+
 
 
 " ===================
@@ -88,12 +119,12 @@ set pastetoggle=<F12>
 " ===================
 " ===================
 
-" Color scheme
+" color scheme
 set background=dark         " assume a dark background
 colorscheme Tomorrow-Night
 
 
-" Font size  
+" font size  
 if has("gui_running")
     set guifont=Consolas:h16
 endif
@@ -129,6 +160,16 @@ Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 " =============================
 " =============================
 
+"""""""""""""""""""""
+" Map <leader> to , "
+""""""""""""""""""" "
+let mapleader = ","
+let g:mapleader = ","
+
+" Fast saving
+nmap <leader>w :w!<cr>
+
+
 """"""""""""""""""""""""""""""""""""""""""
 " Shortcut for copying to the clipboard  "
 " (use this to yank to the clipboard)    "
@@ -157,6 +198,15 @@ inoremap <C-j> <Esc>:m .+1<CR>==gi
 inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Insert a new line without entering insert mode "
+""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <S-Enter> O<Esc>
+nnoremap <CR> o<Esc>
+
+
 
 
 
