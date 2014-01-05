@@ -3,7 +3,7 @@
 
 My custom Vim configuration.
 
-*** 
+
 
 ## Plugins
 
