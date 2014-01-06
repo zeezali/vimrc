@@ -12,5 +12,6 @@ Requires the following directories:
 
 
 ## Inspiration
+
 [spf13 - Steve Francia](https://github.com/spf13/spf13-vim/blob/3.0/)  
 
