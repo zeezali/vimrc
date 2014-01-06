@@ -75,6 +75,30 @@ set directory=$HOME/.vim/vim-backups/swaps//
 
 
 
+
+" =======================
+" =======================
+" =====   PLUGINS   =====
+" =======================
+" =======================
+
+""""""""""
+" Vundle "
+""""""""""
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" Bundles
+Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+
+
+
+
+
 " ===========================
 " ===========================
 " =====   FORMATTING   ======
@@ -128,29 +152,6 @@ colorscheme Tomorrow-Night
 if has("gui_running")
     set guifont=Consolas:h16
 endif
-
-
-
-
-" =======================
-" =======================
-" =====   PLUGINS   =====
-" =======================
-" =======================
-
-""""""""""
-" Vundle "
-""""""""""
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
-
-" Bundles
-Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
-
 
 
 
