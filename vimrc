@@ -31,6 +31,9 @@ set virtualedit=onemore
 " allow buffer switching without saving
 set hidden 
 
+" set to auto read when a file is changed from the outside
+set autoread
+
 " switch to the current file directory when a new buffer is opened
 autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
 
