@@ -4,8 +4,9 @@
 My custom Vim configuration.
 
 Requires the following directories:  
-`~/.vim/vim-backups/backups  
-`~/.vim/vim-backups/swaps
+`~/.vim/vim-backups/backups`  
+`~/.vim/vim-backups/swaps` 
+`~/.vim/vim-backups/undos`  
 
 
 ## Plugins

@@ -90,6 +90,9 @@ augroup END " }
 set backupdir=$HOME/.vim/vim-backups/backups//
 set directory=$HOME/.vim/vim-backups/swaps//
 
+" persistent undo directory
+set undodir=$HOME/.vim/vim-backups/undos//
+
 
 
 
@@ -111,6 +114,8 @@ Bundle 'gmarik/vundle'
 
 " Bundles
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+
+
 
 
 
@@ -178,6 +183,64 @@ endif
 
 " display the current mode
 set showmode  
+
+" highlight current line
+set cursorline 
+
+
+" ruler
+if has('cmdline_info')
+    set ruler                   
+    set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%)
+    set showcmd                 
+endif
+
+
+" status line
+if has('statusline')
+    set laststatus=2
+
+    set statusline=%<%f\                     
+    set statusline+=%w%h%m%r                 
+    " set statusline+=%{fugitive#statusline()} " Git Hotness
+    set statusline+=\ [%{&ff}/%Y]            
+    set statusline+=\ [%{getcwd()}]          
+    set statusline+=%=%-14.(%l,%c%V%)\ %p%%  
+endif
+
+
+" normal backspace
+set backspace=indent,eol,start
+
+
+" line numbers on
+set nu
+
+" configure line number coloring
+if has("gui_running")
+    highlight CursorLineNr guifg=#4d5359
+endif
+
+" show matching brackets
+set showmatch
+
+" find as you type search
+set incsearch 
+
+" highlight search terms
+set hlsearch
+
+" case insenstive search
+set ignorecase
+
+" case sensitive when uc present
+set smartcase 
+
+" enhanced command line completion
+set wildmenu
+
+" auto fold code
+set foldenable 
 
 
 
