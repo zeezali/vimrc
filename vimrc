@@ -66,8 +66,6 @@ function! ResCur()
     endif
 endfunction
 
-
-
 augroup resCur
     autocmd!
     autocmd BufWinEnter * call ResCur()
