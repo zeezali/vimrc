@@ -31,6 +31,9 @@ set virtualedit=onemore
 " allow buffer switching without saving
 set hidden 
 
+" set to auto read when a file is changed from the outside
+set autoread
+
 " switch to the current file directory when a new buffer is opened
 autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
 
@@ -71,6 +74,30 @@ augroup END " }
 """"""""""""""""""""""""""""""""""""""""""
 set backupdir=$HOME/.vim/vim-backups/backups//
 set directory=$HOME/.vim/vim-backups/swaps//
+
+
+
+
+
+" =======================
+" =======================
+" =====   PLUGINS   =====
+" =======================
+" =======================
+
+""""""""""
+" Vundle "
+""""""""""
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" Bundles
+Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+
 
 
 
@@ -128,29 +155,6 @@ colorscheme Tomorrow-Night
 if has("gui_running")
     set guifont=Consolas:h16
 endif
-
-
-
-
-" =======================
-" =======================
-" =====   PLUGINS   =====
-" =======================
-" =======================
-
-""""""""""
-" Vundle "
-""""""""""
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
-
-" Bundles
-Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
-
 
 
 
