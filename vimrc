@@ -65,7 +65,7 @@ augroup END " }
 
 
 """"""""""""""""""""""""""""""""""""""""""
-" Setup backup directory                 "
+" Setup centralised backup directory     "
 " // at the end prevents name collisions "
 " (backups in one place)                 "
 """"""""""""""""""""""""""""""""""""""""""
@@ -205,9 +205,6 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 """"""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <S-Enter> O<Esc>
 nnoremap <CR> o<Esc>
-
-
-
 
 
 
