@@ -41,6 +41,21 @@ autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
 scriptencoding utf-8
 
 
+" persistent undo
+if has('persistent_undo')
+
+    set undofile                
+
+    " maximum number of changes that can be undone
+    set undolevels=1000          
+
+    " maximum number lines to save for undo on a buffer reload
+    set undoreload=10000
+
+endif
+
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Restore cursor to file position in previous editing session "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -50,6 +65,8 @@ function! ResCur()
         return 1
     endif
 endfunction
+
+
 
 augroup resCur
     autocmd!
@@ -78,7 +95,6 @@ set directory=$HOME/.vim/vim-backups/swaps//
 
 
 
-
 " =======================
 " =======================
 " =====   PLUGINS   =====
@@ -97,8 +113,6 @@ Bundle 'gmarik/vundle'
 
 " Bundles
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
-
-
 
 
 
@@ -145,6 +159,8 @@ set textwidth=0
 set wrapmargin=0
 
 
+
+
 " ===================
 " ===================
 " =====   UI   ======
@@ -160,6 +176,10 @@ colorscheme Tomorrow-Night
 if has("gui_running")
     set guifont=Consolas:h16
 endif
+
+
+" display the current mode
+set showmode  
 
 
 
