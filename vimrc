@@ -96,6 +96,7 @@ set undodir=$HOME/.vim/vim-backups/undos//
 
 
 
+
 " =======================
 " =======================
 " =====   PLUGINS   =====
@@ -123,10 +124,30 @@ Bundle 'Raimondi/delimitMate'
 
 Bundle 'mattn/emmet-vim'
 
+
 " HTML
 Bundle 'amirh/HTML-AutoCloseTag'
 
+Bundle 'othree/html5.vim'
 
+
+" Javascript
+Bundle "pangloss/vim-javascript"
+
+
+
+" ===========================
+" ===========================
+" ===== PLUGIN SETTINGS =====
+" ===========================
+" ===========================
+
+" enables HTML/CSS syntax highlighting in js files
+let javascript_enable_domhtmlcss=1
+
+" only use emmet in html + css
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
 
 
 
@@ -229,7 +250,7 @@ set nu
 
 " configure line number coloring
 if has("gui_running")
-    highlight CursorLineNr guifg=#4d5359
+    highlight CursorLineNr guifg=#555b63
 endif
 
 " show matching brackets
@@ -252,6 +273,9 @@ set wildmenu
 
 " auto fold code
 set foldenable 
+
+" add script tag to html syntax
+syn keyword htmlTagName contained script
 
 
 
@@ -289,6 +313,23 @@ if has('gui_macvim')
 endif
 
 
+"""""""""""""""""""""""""""""""
+" Move easier between windows "
+"""""""""""""""""""""""""""""""
+map <leader>j <C-W>j
+map <leader>k <C-W>k
+map <leader>h <C-W>h
+map <leader>l <C-W>l
+
+
+
+""""""""""""""""""""""""""""""""""""""""""
+" Move up and down even on wrapped lines "
+""""""""""""""""""""""""""""""""""""""""""
+map j gj
+map k gk
+
+
 """""""""""""""""""""""""""""""""""""""" "
 " Shortcuts for moving lines up and down "
 " (shifting lines up and down)           "
@@ -306,6 +347,16 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 """"""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <S-Enter> O<Esc>
 nnoremap <CR> o<Esc>
+
+
+"""""""""""""""""""""""
+" Emmet trigger combo "
+" , e                 "
+"""""""""""""""""""""""
+autocmd FileType html,css,scss imap <expr> <leader>e emmet#expandAbbrIntelligent("\<tab>")
+
+
+
 
 
 
