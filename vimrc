@@ -358,6 +358,12 @@ nnoremap <CR> o<Esc>
 map <leader>ss :setlocal spell!<cr>
 
 
+""""""""""""""""""""""""""""""""""""""
+" Toggle highlighted searches on/off "
+""""""""""""""""""""""""""""""""""""""
+nmap <silent> <leader>/ :set invhlsearch<CR>
+
+
 """""""""""""""""""""""
 " Emmet trigger combo "
 " , e                 "
