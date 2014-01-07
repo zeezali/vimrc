@@ -124,6 +124,7 @@ Bundle 'Raimondi/delimitMate'
 
 Bundle 'mattn/emmet-vim'
 
+Bundle 'loremipsum'
 
 " HTML
 Bundle 'amirh/HTML-AutoCloseTag'
@@ -210,7 +211,7 @@ colorscheme Tomorrow-Night
 
 " font size  
 if has("gui_running")
-    set guifont=Consolas:h16
+    set guifont=Consolas:h15
 endif
 
 
