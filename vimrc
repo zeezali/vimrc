@@ -130,6 +130,7 @@ Bundle 'amirh/HTML-AutoCloseTag'
 
 Bundle 'othree/html5.vim'
 
+Bundle 'gcmt/breeze.vim'
 
 " Javascript
 Bundle "pangloss/vim-javascript"
