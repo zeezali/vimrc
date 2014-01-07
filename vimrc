@@ -351,6 +351,13 @@ nnoremap <S-Enter> O<Esc>
 nnoremap <CR> o<Esc>
 
 
+""""""""""""""""""
+" Spell checking "
+""""""""""""""""""
+" pressing ,ss will toggle and untoggle spell checking
+map <leader>ss :setlocal spell!<cr>
+
+
 """""""""""""""""""""""
 " Emmet trigger combo "
 " , e                 "
