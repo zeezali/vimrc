@@ -112,8 +112,19 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
-" Bundles
+"""""""""""
+" Bundles "
+"""""""""""
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+
+Bundle 'tpope/vim-surround'
+
+Bundle 'Raimondi/delimitMate'
+
+Bundle 'mattn/emmet-vim'
+
+" HTML
+Bundle 'amirh/HTML-AutoCloseTag'
 
 
 
