@@ -168,6 +168,7 @@ set smarttab
 " smart indents
 set smartindent
 
+
 " auto indent
 set autoindent
 
@@ -254,6 +255,14 @@ set nu
 if has("gui_running")
     highlight CursorLineNr guifg=#555b63
 endif
+
+
+" hide scrollbars
+if has("gui_running")
+    set guioptions-=r
+    set guioptions-=L
+endif
+
 
 " show matching brackets
 set showmatch
