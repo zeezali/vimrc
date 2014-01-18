@@ -12,7 +12,10 @@ Requires the following directories:
 ## Plugins
 
 
-## Inspiration
+## Inspired by
 
 [spf13 - Steve Francia](https://github.com/spf13/spf13-vim/blob/3.0/)  
 
+[amix - Amir Salihefendic](http://amix.dk/vim/vimrc.html)
+
+[Derek Wyatt's videos](http://derekwyatt.org/vim/tutorials/)

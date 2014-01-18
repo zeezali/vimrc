@@ -40,6 +40,8 @@ autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
 " utf8
 scriptencoding utf-8
 
+" turn off visual bell (no sound)
+set visualbell t_vb=
 
 " persistent undo
 if has('persistent_undo')
@@ -120,6 +122,9 @@ Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 
 Bundle 'tpope/vim-surround'
 
+Bundle 'xolox/vim-misc'
+Bundle 'xolox/vim-session'
+
 Bundle 'Raimondi/delimitMate'
 
 Bundle 'mattn/emmet-vim'
@@ -128,9 +133,7 @@ Bundle 'loremipsum'
 
 " HTML
 Bundle 'amirh/HTML-AutoCloseTag'
-
 Bundle 'othree/html5.vim'
-
 Bundle 'gcmt/breeze.vim'
 
 " Javascript
@@ -148,8 +151,14 @@ Bundle "pangloss/vim-javascript"
 let javascript_enable_domhtmlcss=1
 
 " only use emmet in html + css
-let g:user_emmet_install_global = 0
+let g:user_emmet_install_global=0
 autocmd FileType html,css EmmetInstall
+
+" vim session settings
+let g:session_autoload='yes'
+let g:session_autosave='yes'
+let g:session_autosave_periodic=5
+
 
 
 
@@ -353,9 +362,9 @@ vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
 
-""""""""""""""""""""""""""""""""""""""""""""""""""
-" Insert a new line without entering insert mode "
-""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" Insert new lines without entering insert mode "
+"""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <S-Enter> O<Esc>
 nnoremap <CR> o<Esc>
 
