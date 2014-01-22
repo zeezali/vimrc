@@ -229,8 +229,9 @@ endif
 set showmode  
 
 " highlight current line
-set cursorline 
-
+if has("gui_running")
+    set cursorline 
+endif
 
 " ruler
 if has('cmdline_info')
