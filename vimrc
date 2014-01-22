@@ -162,6 +162,8 @@ Bundle 'mattn/emmet-vim'
 
 Bundle 'loremipsum'
 
+Bundle 'kien/ctrlp.vim'
+
 " HTML
 Bundle 'amirh/HTML-AutoCloseTag'
 Bundle 'othree/html5.vim'
@@ -190,7 +192,15 @@ let g:session_autoload='yes'
 let g:session_autosave='yes'
 let g:session_autosave_periodic=5
 
+" ctrlp settings
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
 
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\.git$\|\.hg$\|\.svn$\|node_modules$',
+    \ 'file': '\v\.(exe|so|dll)$'
+    \ }
 
 
 " ===========================
