@@ -176,8 +176,8 @@ Bundle 'gcmt/breeze.vim'
 Bundle "pangloss/vim-javascript"
 
 " Sass
-Bundle "cakebaker/scss-syntax.vim"
-
+Bundle "tpope/vim-haml"
+" Bundle 'cakebaker/scss-syntax.vim'
 
 
 
@@ -195,9 +195,12 @@ endif
 " enables HTML/CSS syntax highlighting in js files
 let javascript_enable_domhtmlcss=1
 
-" only use emmet in html + css
+" only use emmet in html + css + scss
 let g:user_emmet_install_global=0
-autocmd FileType html,css EmmetInstall
+autocmd FileType html,css,scss EmmetInstall
+
+" emmet trigger combo
+autocmd FileType html,css,scss imap <expr> <leader>e emmet#expandAbbrIntelligent("\<tab>")
 
 " lightweight sessions that are constrained to a single tab page
 set sessionoptions-=tabpages
@@ -444,13 +447,6 @@ map <leader>ss :setlocal spell!<cr>
 " Toggle highlighted searches on/off "
 """"""""""""""""""""""""""""""""""""""
 nmap <silent> <leader>/ :set invhlsearch<CR>
-
-
-"""""""""""""""""""""""
-" Emmet trigger combo "
-" , e                 "
-"""""""""""""""""""""""
-autocmd FileType html,css,scss imap <expr> <leader>e emmet#expandAbbrIntelligent("\<tab>")
 
 
 
