@@ -149,7 +149,8 @@ Bundle 'gmarik/vundle'
 """""""""""
 " Bundles "
 """""""""""
-Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+" Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+Bundle 'chriskempson/base16-vim'
 
 Bundle 'tpope/vim-surround'
 
@@ -186,6 +187,11 @@ Bundle "cakebaker/scss-syntax.vim"
 " ===========================
 " ===========================
 
+" base16 256 colors
+if has("gui_running")
+    let base16colorspace=256
+endif
+
 " enables HTML/CSS syntax highlighting in js files
 let javascript_enable_domhtmlcss=1
 
@@ -212,6 +218,8 @@ let g:ctrlp_custom_ignore = {
     \ }
 
 
+" nerd commenter settings
+let g:NERDSpaceDelims = 1
 
 
 " ===========================
@@ -268,7 +276,8 @@ set wrapmargin=0
 
 " color scheme
 set background=dark         " assume a dark background
-colorscheme Tomorrow-Night
+" colorscheme Tomorrow-Night
+colorscheme base16-tomorrow
 
 
 " font size  
@@ -315,7 +324,9 @@ set nu
 
 " configure line number coloring
 if has("gui_running")
-    highlight CursorLineNr guifg=#555b63
+    highlight LineNr guibg = #1D1F21
+    highlight LineNr guifg = #373b41
+    highlight CursorLineNr guifg = #555b63
 endif
 
 
