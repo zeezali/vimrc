@@ -164,6 +164,8 @@ Bundle 'loremipsum'
 
 Bundle 'kien/ctrlp.vim'
 
+Bundle 'scrooloose/nerdcommenter'
+
 " HTML
 Bundle 'amirh/HTML-AutoCloseTag'
 Bundle 'othree/html5.vim'
@@ -172,6 +174,8 @@ Bundle 'gcmt/breeze.vim'
 " Javascript
 Bundle "pangloss/vim-javascript"
 
+" Sass
+Bundle "cakebaker/scss-syntax.vim"
 
 
 " ===========================
