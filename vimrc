@@ -178,6 +178,8 @@ Bundle "pangloss/vim-javascript"
 Bundle "cakebaker/scss-syntax.vim"
 
 
+
+
 " ===========================
 " ===========================
 " ===== PLUGIN SETTINGS =====
@@ -190,6 +192,9 @@ let javascript_enable_domhtmlcss=1
 " only use emmet in html + css
 let g:user_emmet_install_global=0
 autocmd FileType html,css EmmetInstall
+
+" lightweight sessions that are constrained to a single tab page
+set sessionoptions-=tabpages
 
 " vim session settings
 let g:session_autoload='yes'
@@ -205,6 +210,8 @@ let g:ctrlp_custom_ignore = {
     \ 'dir':  '\.git$\|\.hg$\|\.svn$\|node_modules$',
     \ 'file': '\v\.(exe|so|dll)$'
     \ }
+
+
 
 
 " ===========================
@@ -433,9 +440,6 @@ nmap <silent> <leader>/ :set invhlsearch<CR>
 " , e                 "
 """""""""""""""""""""""
 autocmd FileType html,css,scss imap <expr> <leader>e emmet#expandAbbrIntelligent("\<tab>")
-
-
-
 
 
 
