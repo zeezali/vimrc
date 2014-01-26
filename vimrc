@@ -176,8 +176,14 @@ Bundle 'gcmt/breeze.vim'
 Bundle "pangloss/vim-javascript"
 
 " Sass
-Bundle "tpope/vim-haml"
+Bundle 'tpope/vim-haml'
 " Bundle 'cakebaker/scss-syntax.vim'
+
+" Markdown
+Bundle 'plasticboy/vim-markdown'
+
+" Stylus
+Bundle 'wavded/vim-stylus'
 
 
 
