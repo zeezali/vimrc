@@ -167,6 +167,8 @@ Bundle 'kien/ctrlp.vim'
 
 Bundle 'scrooloose/nerdcommenter'
 
+Bundle 'godlygeek/tabular'
+
 " HTML
 Bundle 'amirh/HTML-AutoCloseTag'
 Bundle 'othree/html5.vim'
@@ -220,6 +222,18 @@ let g:ctrlp_custom_ignore = {
 
 " nerd commenter settings
 let g:NERDSpaceDelims = 1
+
+
+" tabular
+if exists(":Tabularize")
+    nmap <Leader>= :Tabularize /=<CR>
+    vmap <Leader>= :Tabularize /=<CR>
+    nmap <Leader>; :Tabularize /:<CR>
+    vmap <Leader>; :Tabularize /:<CR>
+    nmap <Leader>: :Tabularize /:\zs<CR>
+    vmap <Leader>: :Tabularize /:\zs<CR>
+endif
+
 
 
 " ===========================
