@@ -187,6 +187,8 @@ Bundle 'plasticboy/vim-markdown'
 " Stylus
 Bundle 'wavded/vim-stylus'
 
+" Autocomplete
+Bundle 'Valloric/YouCompleteMe'
 
 
 " ===========================
