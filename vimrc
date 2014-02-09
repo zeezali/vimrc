@@ -176,6 +176,7 @@ Bundle 'gcmt/breeze.vim'
 
 " Javascript
 Bundle "pangloss/vim-javascript"
+Bundle "marijnh/tern_for_vim"
 
 " Sass
 Bundle 'tpope/vim-haml'
