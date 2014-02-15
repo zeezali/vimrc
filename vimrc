@@ -157,7 +157,8 @@ Bundle 'tpope/vim-surround'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-session'
 
-Bundle 'Raimondi/delimitMate'
+" Bundle 'Raimondi/delimitMate'
+Bundle 'jiangmiao/auto-pairs'
 
 Bundle 'mattn/emmet-vim'
 
@@ -227,7 +228,7 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 
 let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\.git$\|\.hg$\|\.svn$\|node_modules$',
+    \ 'dir':  '\.git$\|\.hg$\|\.svn$\|node_modules|__deploy$',
     \ 'file': '\v\.(exe|so|dll)$'
     \ }
 
@@ -480,4 +481,6 @@ vnoremap <silent> * :<C-U>
   \gvy/<C-R><C-R>=substitute(
   \escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
+
+
 
