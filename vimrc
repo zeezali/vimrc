@@ -250,6 +250,10 @@ if exists(":Tabularize")
 endif
 
 
+" detect indent
+let g:detectindent_preferred_expandtab = 1
+
+
 
 " ===========================
 " ===========================
