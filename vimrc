@@ -247,6 +247,18 @@ if exists(":Tabularize")
     vmap <Leader>: :Tabularize /:\zs<CR>
 endif
 
+" youcompleteme
+let g:ycm_filetype_blacklist = {
+      \ 'tagbar' : 1,
+      \ 'qf' : 1,
+      \ 'notes' : 1,
+      \ 'markdown' : 1,
+      \ 'mkd' : 1,
+      \ 'unite' : 1,
+      \ 'text' : 1,
+      \ 'vimwiki' : 1,
+      \ 'pandoc' : 1
+      \}
 
 
 " ===========================
@@ -406,11 +418,12 @@ let g:mapleader = ","
 nmap <leader>w :w!<cr>
 
 
-""""""""""""""""""""""""""""""""""""""""""
-" Shortcut for copying to the clipboard  "
-" (use this to yank to the clipboard)    "
-" CTRL + C                               "
-""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""
+" Shortcut for copying to the clipboard       "
+" (use this to yank to the clipboard)         "
+" CTRL + C                                    "
+" http://stackoverflow.com/a/11489440/2710964 "
+"""""""""""""""""""""""""""""""""""""""""""""""
 vnoremap <C-c> "+y
 
 
