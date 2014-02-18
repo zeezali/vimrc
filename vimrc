@@ -170,6 +170,8 @@ Bundle 'scrooloose/nerdcommenter'
 
 Bundle 'godlygeek/tabular'
 
+Bundle 'ciaranm/detectindent'
+
 " HTML
 Bundle 'amirh/HTML-AutoCloseTag'
 Bundle 'othree/html5.vim'
