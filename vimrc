@@ -262,6 +262,8 @@ let g:ycm_filetype_blacklist = {
       \ 'pandoc' : 1
       \}
 
+let g:ycm_echo_current_diagnostic = 0
+
 " detect indent
 let g:detectindent_preferred_expandtab = 1
 
@@ -365,7 +367,9 @@ set backspace=indent,eol,start
 
 
 " line numbers on
-set nu
+if has("gui_running")
+    set nu
+endif
 
 " configure line number coloring
 if has("gui_running")
