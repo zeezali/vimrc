@@ -322,7 +322,8 @@ set wrapmargin=0
 " ===================
 
 " color scheme
-set background=dark         " assume a dark background
+set background=dark
+
 " colorscheme Tomorrow-Night
 colorscheme base16-tomorrow
 
