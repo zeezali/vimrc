@@ -152,47 +152,6 @@ Bundle 'gmarik/vundle'
 " Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Bundle 'chriskempson/base16-vim'
 
-Bundle 'tpope/vim-surround'
-
-Bundle 'xolox/vim-misc'
-Bundle 'xolox/vim-session'
-
-" Bundle 'Raimondi/delimitMate'
-Bundle 'jiangmiao/auto-pairs'
-
-Bundle 'mattn/emmet-vim'
-
-Bundle 'loremipsum'
-
-Bundle 'kien/ctrlp.vim'
-
-Bundle 'scrooloose/nerdcommenter'
-
-Bundle 'godlygeek/tabular'
-
-Bundle 'ciaranm/detectindent'
-
-" HTML
-Bundle 'amirh/HTML-AutoCloseTag'
-Bundle 'othree/html5.vim'
-Bundle 'gcmt/breeze.vim'
-
-" Javascript
-Bundle "pangloss/vim-javascript"
-Bundle "marijnh/tern_for_vim"
-
-" Sass
-Bundle 'tpope/vim-haml'
-" Bundle 'cakebaker/scss-syntax.vim'
-
-" Markdown
-Bundle 'plasticboy/vim-markdown'
-
-" Stylus
-Bundle 'wavded/vim-stylus'
-
-" Autocomplete
-Bundle 'Valloric/YouCompleteMe'
 
 
 " ===========================
@@ -205,67 +164,6 @@ Bundle 'Valloric/YouCompleteMe'
 if has("gui_running")
     let base16colorspace=256
 endif
-
-" enables HTML/CSS syntax highlighting in js files
-let javascript_enable_domhtmlcss=1
-
-" only use emmet in html + css + scss
-let g:user_emmet_install_global=0
-autocmd FileType html,css,scss EmmetInstall
-
-" emmet trigger combo
-autocmd FileType html,css,scss imap <expr> <leader>e emmet#expandAbbrIntelligent("\<tab>")
-
-" lightweight sessions that are constrained to a single tab page
-set sessionoptions-=tabpages
-
-" vim session settings
-let g:session_autoload='yes'
-let g:session_autosave='yes'
-let g:session_autosave_periodic=5
-
-" ctrlp settings
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ra'
-
-let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\.git$\|\.hg$\|\.svn$\|node_modules$\|__deploy$\',
-    \ 'file': '\v\.(exe|so|dll)$'
-    \ }
-
-
-" nerd commenter settings
-let g:NERDSpaceDelims = 1
-
-
-" tabular
-if exists(":Tabularize")
-    nmap <Leader>= :Tabularize /=<CR>
-    vmap <Leader>= :Tabularize /=<CR>
-    nmap <Leader>; :Tabularize /:<CR>
-    vmap <Leader>; :Tabularize /:<CR>
-    nmap <Leader>: :Tabularize /:\zs<CR>
-    vmap <Leader>: :Tabularize /:\zs<CR>
-endif
-
-" youcompleteme
-let g:ycm_filetype_blacklist = {
-      \ 'tagbar' : 1,
-      \ 'qf' : 1,
-      \ 'notes' : 1,
-      \ 'markdown' : 1,
-      \ 'mkd' : 1,
-      \ 'unite' : 1,
-      \ 'text' : 1,
-      \ 'vimwiki' : 1,
-      \ 'pandoc' : 1
-      \}
-
-let g:ycm_echo_current_diagnostic = 0
-
-" detect indent
-let g:detectindent_preferred_expandtab = 1
 
 
 
